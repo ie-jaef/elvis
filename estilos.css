@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Centrar verticalmente */
+    height: 100vh;
+    background-color: #ebeef5; /* color de fondo general */
+}
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx INICIO HEADER*/
+header{ /*encabezado donde se encuenta el menú de navegacion*/
+  width: 100%;
+  height: 80px; /*alto de encabezado 60px*/
+  background: #186704;  /*Color de fondo del encabezado*/
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.7); /*Sombra del encabezado*/
+}
+
+header label{ /*Label donde estara la imagen del menu desplegable*/
+  display: none; /*Oculta la imagen del menu desplegable en pantallas grandes*/  
+}
+
+    nav{ /*Crea una lista desordenada*/
+     width: 100%;
+     height: 80px;
+    }
+
+    nav ul{ /*Crea una lista desordenada*/
+      width: 100%;
+      height: 100%;
+      list-style: none; /*Estilo de lista, oculta los puntos o viñetas*/
+      padding: 0; /*Borde inferior la lista*/
+      display: flex; /*Coloca la lista en una sola fila horizontal*/
+      justify-content: flex-end; /*Alinea la lista o contenido hacia el final de la derecha*/
+      align-items: center;
+    }
+
+    nav li{ /*Lista del menÃº desplegable*/
+      text-transform: uppercase; /*Transforma el texto a mayÃºscula*/
+    }
+
+    nav li:hover{ /*Lo que pasarÃ¡ al pasar el cursor sobre el menÃº desplegable*/
+      background: rgba(255, 255, 0, 0.9); /*Color de fondo alfa el 0.3 de opacidad*/
+      border-radius: 5px;
+    }
+
+    nav li a{ /*Los enlaces de la lista desplegable*/
+      display: block; /*Cada elemento de la lista ocupa el 100% del ancho de su elemento padre*/
+      padding: 10px 10px; /*Borde inferior la los enlaces de la lista desplegable*/
+      color: #fff; /*Color de los enlaces de la lista desplegable*/
+      text-decoration: none; /*Quita lo subrayado de los enlaces de la lista desplegable*/
+    }
+    nav li a:hover{ /*Los enlaces de la lista desplegable*/
+      color: #000; /*Color de los enlaces de la lista desplegable*/
+    }
+
+    #boton-menu{ /*id de input o checkbox*/
+      display: none; /*Oculta el boton checkbox (casilla)*/
+    }
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN HEADER*/
+
+
+
+/* inicio conteneedor general --contenido de la pagina  */
+#areatotalcontenidos{
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  text-align: justify;
+  background-color: #ebeef5; /* color de fonde contenedor general */
+}
+/* fin contenido de lapagina */
+
+
+
+/* inicio TITULO GENERALES */
+#titulogenerales{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  background: #186704;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 0px 0px 0px 2px #000;
+  animation: fade 3s;
+}
+
+#titulogenerales-whatsapp{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;     /* Centrar horizontalmente */
+  align-items: center;         /* Centrar verticalmente */
+  background: transparent;
+  animation: fade 5s;
+}
+
+.whatsapp-link {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    transform: scale(1.1);
+}
+
+#titulogenerales:hover{
+   animation: movimiento-y-escala 3s ease-in-out;
+}
+/* fin TITULO GENERAL */
+
+
+
+
+/* inicio contenidos*/
+#textos{
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
+  text-align: justify;
+  background: transparent;
+  color: #000;
+  font-size: 16px;
+  padding: 20px; 
+}
+
+#textos-formulario{
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
+  text-align: justify;
+  background: transparent;
+  color: #000;
+  font-size: 16px;
+  padding: 20px; 
+}
+
+.container-fotos{
+  min-height: 100vh;
+  background-color: #ebeef5; /* color de fonde contenedor general */
+  display: grid;
+  gap: 20px; /* Espacio entre los elementos */
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Diseño responsive */
+  justify-content: space-between; /* Alineación entre los elementos */
+  align-items: center; /* Alineación vertical (opcional) */
+}
+
+.grid-fotos{
+  color: white;
+  text-align: center;
+  align-items: center; /* Alineación vertical (opcional) */
+  padding: 2px;
+  font-size: 16px;
+  border-radius: 4px;
+  animation: movimiento-y-escala 3s ease-in-out;
+}
+
+  @keyframes movimiento-y-escala {
+      0% {
+          transform: scale(1) translateX(0);
+      }
+      50% {
+          transform: scale(0.9) translateX(1px);
+      }
+      100% {
+          transform: scale(1) translateX(0);
+          }
+      }
+
+
+
+@keyframes fade {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.galeria-img{
+  width: 100%;
+  height: auto;
+  border: solid 8px #fff;  /* borde de las imágenes */
+  border-radius: 4px;
+  box-shadow: 0px 0px 6px #000;
+ 
+}
+
+.descripcion-fotos{
+  background: #186704; 
+  border: solid 1px #000; 
+  border-radius: 4px; 
+  padding: 10px; 
+  color: #fff; 
+  font-size: 18px; 
+  font-weight: bolder;
+}
+
+/* fin contenidos*/
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx INICIO FORMULARIO*/
+form {
+ max-width: 600px;
+ box-sizing: border-box; 
+ margin: auto;
+ padding: 20px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ background-color: #32bb16;
+ box-shadow: 0px 0px 4px black;
+
+ animation-name: cambio-de-color;
+ animation-duration: 2s;
+
+}
+
+@keyframes cambio-de-color {
+  0%   {background-color: #186704;}
+  25%  {background-color: #2d9f16;}
+  75%   {background-color: #32bb16;}
+  100%  {background-color: #186704;}
+}
+
+label {
+ display: block;
+ margin-bottom: 5px;
+ font-family: Arial;
+}
+
+input {
+ padding: 10px;
+ width: 100%;
+ height: 30px;
+ border-radius: 5px;
+ border: 1px solid #ccc;
+ font-size: 16px;
+ text-transform: uppercase;
+}
+
+textarea {
+ padding: 10px;
+ width: 100%;
+ height: 120px;
+ border-radius: 5px;
+ border: 1px solid #ccc;
+ font-size: 16px;
+}
+
+button {
+ background-color: #146304;
+ color: white;
+ padding: 12px;
+ border: solid 1px #fff;
+ border-radius: 5px;
+ cursor: pointer;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN FORMULARIO*/
+
+
+
+
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx INICIO PANTALLA TABLET O CELULAR*/
+ 
+@media (max-width: 768px){ /*Lo que pasarÃ¡ al estar en una pantalla inferior a dicho pixeles*/
+  header label{ /*Imagen dentro de label ubicado en el encabezado*/
+  display: block; /*Hace que la imagen o logo apareza al estar en pantalla menor a 952px*/
+ 
+  }
+
+.banner { /*Label donde estara la imagen del menu desplegable*/
+  width: 275px; /*Oculta la imagen del menu desplegable en pantallas grandes*/
+  height: 70px;
+  margin-left: 85px;
+  margin-top: 4px;
+  position: absolute;
+}
+
+span{
+  width: 100%;
+  margin-top: 100px;
+  left: -90px;
+  position: absolute;
+}
+
+form{
+  width: 100%;
+}
+
+#textos-formulario{
+  padding: 0px; 
+}
+
+
+  #boton{
+ cursor: pointer;
+  }
+
+  .logo-grande{
+    display: none; /*Logo de negocio se olculta al estar en pantallas pequeÃ±as menor a 952px*/ 
+  }
+
+  nav{ /*Etiqueta nav con clase menu ------ Menu de navegacion*/
+  top: 87px; /* Debajo del header */
+  width: 100%;
+  height: auto;
+  position: absolute; /*Posicion absoluta o fija de la lista desplegable*/
+  background: #186704;  /*Color de fondo del encabezado*/
+  margin-left: -100%; /*Esconde la lista al margen superior en un 110% a la izquierda mar el margen de 10px del header*/
+  transition: all 0.5s; /*Transicion del menÃº en medio segundo de duraciÃ³n*/
+  }
+
+  nav ul{
+  flex-direction: column; /*La lista del menu se pone encolumna al estar en patalla inferior a 952px*/
+  display: flex; /*Coloca la lista en una sola fila horizontal*/
+  align-items: center;
+  }
+
+  nav li{
+  width: 100%;
+  border-top: 1px solid #fff; /*borde superior de color blanco a la lista desplegable o enlaces en columna*/
+  text-align: center; /*Texto centrado en la lista desplegable*/
+  text-transform: uppercase; /*Transforma a mayuscula el texto*/
+  }
+    nav li:hover{ /*Lo que pasarÃ¡ al pasar el cursor sobre el menÃº desplegable*/
+      border-radius: 0px;
+    }
+
+  #boton-menu:checked ~ nav{ /*Lo que pasara al hacer check en la casilla del checkbox*/
+    margin-top: 0px; /*sin espacio de padding superior*/
+    margin-bottom: 0px; /*margen inferior*/
+    margin-left: 0px; /*margen izquierdo*/
+    margin-right: 0px; /*margen derecha*/
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.8); /*Sombra del la lista desplegable etiqueta nav*/
+    width: 100%; /*Ancho de la lista desplegable menos el margen de 10px a la izquierda y 10 a la derecha*/
+    z-index: 99; /*ESte será el objeto que está sobre otros objetos con menor a 99 z index*/
+  }
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN PANTALLA TABLET O CELULAR*/
+
+
+
+
+
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx INICIO FOOTER*/
+footer{
+    height: 60px; /* Altura del footer */
+    background-color: #0b3002;
+    color: white;
+    text-align: center;
+    position: relative; /* Permite que el footer se mantenga en su lugar */
+
+
+text-align: center;
+padding-top: 20px;
+padding-bottom: 20px;
+font-size: 14px;
+color: white;
+font-family: Arial, sans-serif;
+bottom: 0;
+}
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN FOOTER*/

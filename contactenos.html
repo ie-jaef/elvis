@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">  
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="fotos/favicon.png"/>     
+    <center> <title>I. E. Tec. Agrop. "Jose Antonio Encinas Franco"</title> </center>   
+    <meta name="title" content="I. E. Tec. Agrop. Jose Antonio Encinas Franco">
+    <meta name="description" content="I. E. Tec. Agrop. Jose Antonio Encinas Franco">    
+    <link href="estilos.css" rel="stylesheet">
+</head>
+
+<body>    
+    <header>
+        <img  class="logo-grande" style="width:330px; height: 80px; position: absolute;" src="fotos/logo2.png">
+        <input type="checkbox" id="boton-menu">
+            <label id="boton" for="boton-menu">
+                <img  style="width:80px; height: 80px; position: absolute;" src="fotos/icono-menu.png">
+               </label>
+            <label >
+                <img class="banner" src="fotos/logo2.png">
+            </label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="https://notasenlinea.com/" target="_blank">Notas en línea</a></li>
+                <li><a href="contactenos.html">contáctenos</a></li>
+            </ul>
+        </nav>    
+    </header> 
+
+
+
+<section id="areatotalcontenidos">
+        <section id="titulogenerales">
+            <h1>FORMULARIO DE CONTACTO</h1>
+        </section><br>
+
+        <section id="textos-formulario">
+            <form  action="basededatos/recibedatos.php" method="post">
+                        <label>
+                            <span><b>Apellidos y nombres:</b></span>
+                        </label>
+                        <input style="border-radius: 5px" type="text" name="nombre" placeholder="Escribe aquí..." required><br><br>
+                        <label>
+                            <span><b>Cargo:</b></span>
+                            <select required name="cargo" style="background: #186704; height: 30px; font-size: 16px; color: #fff; border-radius: 2px; border-color: #2f0000;" name="rol">
+                                <option>Seleccionar</option>
+                                <option>Director</option>
+                                <option>Docente</option>
+                                <option>Estudiante</option>
+                                <option>Padre de Familia</option>
+                            </select required>
+                        </label><br>
+                        <label>
+                            <span><b>Mensaje:</b></span> 
+                        </label><textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." maxlength="800" required></textarea><br><br>
+                        <center>
+                        <div>
+                            <button>PUBLICAR MENSAJE</button>
+                        </div></center>
+                 </form>
+        </section><br>
+
+        <section id="titulogenerales-whatsapp">
+            <a href="https://wa.me/51967700340?text=Hola%20Sr.(a)%20Directora%20de%20la%20Institución%20Educativa%20José%20Antonio%20Encinas%20Franco.%20Mi%20consulta%20es%20el%20siguiente:%20" target="_blank" class="whatsapp-link"> <img src="fotos/whatsapp.png" width="250px"></a>
+        </section><br>
+
+        <section id="titulogenerales">
+            <h1>MENSAJES PUBLICADOS</h1>
+        </section><br>
+
+        <section id="textos">
+            <h1>Publicado:</h1>
+        </section>
+</section>
+
+
+
+    
+<footer>
+    Copyright © I.E. "José Antonio Encinas Franco" Chacarilla - Huancavelica 2024
+</footer>
+</body>  
+</html>
+
+
+
+
+
+
+
+
+    

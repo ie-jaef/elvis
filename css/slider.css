@@ -1,0 +1,68 @@
+
+/********************** Slider ************************/
+.slider-container {
+	margin: 10px;
+	width: calc(100% - 20px);
+	min-height: 100vh;
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Centrar verticalmente */
+    object-fit: cover;
+  
+}
+
+
+.mp-slider {
+	justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Centrar verticalmente */
+	position:relative; /* pocicion de las imágenes slider */
+	top:0px;
+	width:100%;
+} 
+
+
+.mp-slider .items {
+	display:none;
+}
+
+
+
+.mp-prev, .mp-next {
+	position: absolute;  
+	width:50px;
+	height:300px;
+	bottom:0;
+	z-index:50; /*ESte será el objeto que está sobre otros objetos con menor de 50 z index*/
+}
+ 
+ 
+.mp-prev {
+	left:0;
+	background:url(../fotos/slider-prev.png) no-repeat right 0;
+}
+	.mp-prev:hover {
+		background:url(../fotos/slider-prev-hover.png) no-repeat right 0;
+	}
+
+
+
+.mp-next {
+	right:0;
+	background:url(../fotos/slider-next.png) no-repeat right 0;
+}
+	.mp-next:hover {
+		background:url(../fotos/slider-next-hover.png) no-repeat right 0;
+	}
+
+
+.mp-slider .banner {
+	position:absolute;
+	left:35px;
+	right:35px;
+	font-family: 'Serif';
+	color: yellow;
+	top:120px;
+	text-align:center;
+	font-size:30px;
+	text-transform:uppercase;
+}
+
